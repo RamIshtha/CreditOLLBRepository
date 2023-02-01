@@ -1,0 +1,15 @@
+server.port: 8083
+server:
+  servlet:
+    context-path: /colts
+spring:
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3307/db
+    username: user
+    password: password
+  jpa:
+    hibernate.ddl-auto: update
+    
+          
+          
+#url: jdbc:mysql:///db1157
