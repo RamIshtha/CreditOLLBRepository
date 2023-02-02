@@ -37,4 +37,7 @@ public class Lender implements Serializable {
 	@Column(name = "AMOUNT")
 	@NonNull
 	private String lenAddress;
+	@Column(name = "PROCESING_FEE")
+	@NonNull
+	private Integer processingFee;
 }

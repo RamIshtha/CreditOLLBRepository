@@ -36,28 +36,29 @@ public class Loans {
 	@Column(name = "BORROWERNAME")
 	@NonNull
 	private String borrowerName;
-	@Column(name = "BORROWEDAMOUNT")
+	@Column(name = "AGREEMENTDATE")
 	@NonNull
-	private Integer borrowedAmount;
-	@Column(name = "BORROWEDATE")
+	private LocalDate agreementDate;	
+	@Column(name = "LOANAMOUNT")
 	@NonNull
-	private LocalDate borrowedDate;
-	@Column(name = "PAIDAMOUNT")  
+	private Integer loanAmount;
+	@Column(name = "PAIDAMOUNT")
 	@NonNull
 	private Integer paidAmount;
-	@Column(name = "BALANCE")
+	@Column(name = "BALANCE_AMOUNT")
 	@NonNull
-	private Integer balance;
+	private Integer balanceAmount;
+	@Column(name = "EMI_AMOUNT")
+	@NonNull
+	private Integer emiAmount;
 	@Column(name = "EMIS")
 	@NonNull
 	private Integer emis;
 	@Column(name = "PAID_EMIS")
 	@NonNull
-	private Integer paidEMIs;
+	private Integer paidEmis;
 	@Column(name = "BALANCE_EMIS")
 	@NonNull
-	private Integer balanceEMIs;
-	@Column(name = "EMI_AMOUNT")
-	@NonNull
-	private Integer emiAmount;
+	private Integer balanceEmis;	
+	
 }
