@@ -24,18 +24,17 @@ public class Lender implements Serializable {
 	@Id
 	@Column(name = "LID")
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer l_id;
+	private Integer lenId;
 	@Column(name = "LNAME", length = 20)
 	@NonNull
-	private String l_name;
+	private String lenName;
 	@Column(name = "LEMAIL", length = 20)
 	@NonNull
-	private String l_email;
+	private String lenEmail;
 	@Column(name = "LMOBILE")
 	@NonNull
-	private Long l_mobile;
+	private Long lenMobile;
 	@Column(name = "AMOUNT")
 	@NonNull
-	private String b_address;
-	
+	private String lenAddress;
 }

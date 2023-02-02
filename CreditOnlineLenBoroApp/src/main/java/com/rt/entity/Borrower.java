@@ -1,7 +1,7 @@
 package com.rt.entity;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -25,32 +25,32 @@ public class Borrower implements Serializable {
 	@Id
 	@Column(name = "BID")
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer b_id;
+	private Integer borowId;
 	@Column(name = "BNAME", length = 20)
 	@NonNull
-	private String b_name;
+	private String borowName;
+	@Column(name = "BDOB")
+	@NonNull
+	private LocalDate borowDob;
 	@Column(name = "BEMAIL", length = 20)
 	@NonNull
-	private String b_email;
+	private String borowEmail;
 	@Column(name = "BADDRESS", length = 50)
 	@NonNull
-	private String b_address;
+	private String borowAddress;
 	@Column(name = "BNOMINEE", length = 20)
 	@NonNull
-	private String b_nominee;
+	private String borowNominee;
 	@Column(name = "BMOBILE")
 	@NonNull
-	private Long b_mobile;
-	@Column(name = "BDATE")
-	@NonNull
-	private LocalDateTime borrowedDate;
+	private Long borowMobile;
 	@Column(name = "SCORE")
 	@NonNull
-	private Integer b_score;
+	private Integer borowScore;
 	@Column(name = "ELIGIBILITY")
 	@NonNull
-	private Integer b_eligibility;
+	private Integer borowEligibility;
 	@Column(name = "ACTIVE")
 	@NonNull
-	private Boolean b_active;
+	private Boolean borowActive;
 }
