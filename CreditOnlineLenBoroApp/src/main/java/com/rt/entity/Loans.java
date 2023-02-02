@@ -42,7 +42,7 @@ public class Loans {
 	@Column(name = "BORROWEDATE")
 	@NonNull
 	private LocalDate borrowedDate;
-	@Column(name = "PAIDAMOUNT")
+	@Column(name = "PAIDAMOUNT")  
 	@NonNull
 	private Integer paidAmount;
 	@Column(name = "BALANCE")
