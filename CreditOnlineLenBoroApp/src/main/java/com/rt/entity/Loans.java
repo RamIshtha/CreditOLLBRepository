@@ -16,7 +16,7 @@ import lombok.RequiredArgsConstructor;
 
 @Data
 @Entity
-@Table(name = "SP_DATA_LOANS")
+@Table(name = "LOANS")
 @NoArgsConstructor
 @RequiredArgsConstructor
 public class Loans {

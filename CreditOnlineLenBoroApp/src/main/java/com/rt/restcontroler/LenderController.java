@@ -17,10 +17,6 @@ public class LenderController {
 	@Autowired
 	private LenderService service;
 
-	@GetMapping("/getmsg")
-	public String generateWM() {
-		return "hi welcome!!";
-	}
 
 	@PostMapping("/createlender")
 	public Lender saveLender(@RequestBody Lender lender) {

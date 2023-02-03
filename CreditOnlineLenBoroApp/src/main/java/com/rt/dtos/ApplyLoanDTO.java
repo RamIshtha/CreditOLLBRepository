@@ -13,7 +13,7 @@ import lombok.RequiredArgsConstructor;
 public class ApplyLoanDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@NonNull
-	private Integer id;
+	private Integer borrowerId;
 	@NonNull
 	private Integer amount;
 	@NonNull

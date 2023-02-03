@@ -2,11 +2,13 @@ package com.rt.restcontroler;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.rt.dtos.EligibleLoansResponseDTO;
 import com.rt.entity.Loans;
 import com.rt.service.LoansService;
 
@@ -26,6 +28,12 @@ public class LoansController {
 	@GetMapping("/getloans")
 	public Iterable<Loans> getLoans() {
 		Iterable<Loans> loansList = service.fetchAllLoans();
+		return loansList;
+	}
+	
+	@GetMapping("/geteligbleloans/{bid}")
+	public Iterable<EligibleLoansResponseDTO> getEligibleLoans(@PathVariable Integer bid) {
+		Iterable<EligibleLoansResponseDTO> loansList = service.fetchAllEligbleLoans(bid);
 		return loansList;
 	}
 

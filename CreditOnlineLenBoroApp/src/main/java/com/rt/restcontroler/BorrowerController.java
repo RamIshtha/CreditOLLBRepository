@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.rt.dtos.BorrowerRegistrationDTO;
 import com.rt.entity.Borrower;
 import com.rt.service.BorrowerService;
 
@@ -17,16 +18,22 @@ public class BorrowerController {
 	@Autowired
 	private BorrowerService service;
 
-	@PostMapping("/createBorrower")
+	@GetMapping("/getborrowers")
+	public Iterable<Borrower> getBorrower() {
+		Iterable<Borrower> borrowerList = service.fetchAllBorrower();
+		return borrowerList;
+	}
+
+	@PostMapping("/createborrower")
 	public Borrower saveBorrower(@RequestBody Borrower borrower) {
 		Borrower createdBorrower = service.saveBorrower(borrower);
 		return createdBorrower;
 	}
 
-	@GetMapping("/getBorrowers")
-	public Iterable<Borrower> getBorrower() {
-		Iterable<Borrower> borrowerList = service.fetchAllBorrower();
-		return borrowerList;
+	@PostMapping("/registerborrower")
+	public String registerBorrower(@RequestBody BorrowerRegistrationDTO borrower) {
+		String status = service.registerBorrower(borrower);
+		return status;
 	}
 
 }

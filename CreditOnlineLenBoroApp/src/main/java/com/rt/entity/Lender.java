@@ -16,27 +16,27 @@ import lombok.RequiredArgsConstructor;
 
 @Data
 @Entity
-@Table(name = "SP_DATA_LENDER")
+@Table(name = "LENDER")
 @NoArgsConstructor
 @RequiredArgsConstructor
 public class Lender implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
-	@Column(name = "LID")
+	@Column(name = "LEN_ID")
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer lenId;
-	@Column(name = "LNAME", length = 20)
+	@Column(name = "LEN_NAME", length = 20)
 	@NonNull
 	private String lenName;
-	@Column(name = "LEMAIL", length = 20)
+	@Column(name = "LEN_EMAIL", length = 20)
 	@NonNull
 	private String lenEmail;
-	@Column(name = "LMOBILE")
+	@Column(name = "LEN_MOBILE")
 	@NonNull
 	private Long lenMobile;
-	@Column(name = "AMOUNT")
+	@Column(name = "LENDING_AMOUNT")
 	@NonNull
-	private String lenAddress;
+	private Integer lenAmount;
 	@Column(name = "PROCESING_FEE")
 	@NonNull
 	private Integer processingFee;

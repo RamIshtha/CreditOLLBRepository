@@ -1,7 +1,7 @@
 package com.rt.dtos;
 
 import java.io.Serializable;
-import java.time.LocalTime;
+import java.time.LocalDate;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,7 +16,7 @@ public class BorrowerRegistrationDTO implements Serializable{
 	@NonNull
 	private String name;
 	@NonNull
-	private LocalTime	dob;
+	private LocalDate	dob;
 	@NonNull
 	private String email;	
 	@NonNull

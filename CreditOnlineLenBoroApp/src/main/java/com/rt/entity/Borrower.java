@@ -17,37 +17,37 @@ import lombok.RequiredArgsConstructor;
 
 @Data
 @Entity
-@Table(name = "SP_DATA_BORROWER")
+@Table(name = "BORROWER")
 @NoArgsConstructor
 @RequiredArgsConstructor
 public class Borrower implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
-	@Column(name = "BID")
+	@Column(name = "BOROW_ID")
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer borowId;
-	@Column(name = "BNAME", length = 20)
+	@Column(name = "BOROW_NAME", length = 20)
 	@NonNull
 	private String borowName;
-	@Column(name = "BDOB")
+	@Column(name = "BOROW_DOB")
 	@NonNull
 	private LocalDate borowDob;
-	@Column(name = "BEMAIL", length = 20)
+	@Column(name = "BOROW_EMAIL", length = 20)
 	@NonNull
 	private String borowEmail;
-	@Column(name = "BADDRESS", length = 50)
+	@Column(name = "BOROW_ADDRESS", length = 50)
 	@NonNull
 	private String borowAddress;
-	@Column(name = "BNOMINEE", length = 20)
+	@Column(name = "BOROW_NOMINEE", length = 20)
 	@NonNull
 	private String borowNominee;
-	@Column(name = "BMOBILE")
+	@Column(name = "BOROW_MOBILE")
 	@NonNull
 	private Long borowMobile;
-	@Column(name = "SCORE")
+	@Column(name = "BOROW_SCORE")
 	@NonNull
 	private Integer borowScore;
-	@Column(name = "ELIGIBILITY")
+	@Column(name = "BOROW_ELIGIBILITY")
 	@NonNull
 	private Integer borowEligibility;
 	@Column(name = "ACTIVE")
