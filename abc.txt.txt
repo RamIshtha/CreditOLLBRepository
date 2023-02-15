@@ -1,1 +1,1 @@
-i am learning git bash command.
+i am learning git bash command.No wi am adding from remote repo.
